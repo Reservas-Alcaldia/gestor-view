@@ -1,0 +1,102 @@
+.formContainer {
+    background-image: url('../../assets/loginBg.svg');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 65vh; 
+    width: 100%; 
+    max-width: 600px; 
+    padding: 20px; 
+    border-radius: 8px; 
+    background-color: rgba(255, 255, 255, 0.795); /* Fondo semi-transparente */
+}
+
+h1 {
+    margin-bottom: 5%;
+    font-size: 2em; /* Tamaño de fuente relativo */
+}
+
+.FormInput {
+    margin-bottom: 5%;
+    height: 40px; 
+    width: 90%; /* Ancho relativo */
+    align-self: center;
+    padding: 10px; /* Padding interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+input::placeholder {
+    color: #5AC1DD; /* Color del placeholder */
+}
+
+button {
+    background-color: #5AC1DD; /* Color de fondo */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cursor tipo puntero */
+    width: 90%; /* Ancho relativo */
+    height: 40px; /* Altura fija */
+    border: none; /* Sin borde */
+    border-radius: 5%; /* Bordes redondeados */
+}
+
+button:hover {
+    background-color: #4bacc1;
+}
+
+@media (max-width: 800px) {
+
+    .formContainer{
+        width: 70%;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .formContainer {
+        height: 70vh; 
+    }
+
+    h1 {
+        font-size: 1.8em; 
+    }
+
+    input, button {
+        height: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .formContainer {
+        height: 60vh;
+        padding: 10px; 
+    }
+
+    h1 {
+        font-size: 1.5em; 
+    }
+
+    input, button {
+        height: 30px; 
+    }
+}
+
+@media (max-height: 600px) {
+    .formContainer {
+        height: 100vh
+    }
+
+    h1 {
+        font-size: 1.5em; 
+    }
+
+    input, button {
+        height: 30px; 
+    }
+}
+

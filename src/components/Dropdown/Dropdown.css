@@ -1,0 +1,8 @@
+.dropdown select {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+  
