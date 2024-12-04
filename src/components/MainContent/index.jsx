@@ -17,7 +17,7 @@ function MainContent() {
     // Función para cargar las solicitudes desde la API
     const fetchSolicitudes = async () => {
       try {
-        const response = await fetch('http://localhost:3000/solicitudes/all');  
+        const response = await fetch('https://api-reservas-sif.whitedesert-ee16f22f.eastus.azurecontainerapps.io/solicitudes/all');  
         const data = await response.json();
         setSolicitudes(data.data || []); 
         setLoading(false);
@@ -55,7 +55,7 @@ function MainContent() {
   // Abre el modal con los detalles de la solicitud seleccionada
   const openModal = async (solicitud) => {
     try {
-      const response = await fetch(`http://localhost:3000/solicitudes/${solicitud.id_solicitudes}`);
+      const response = await fetch(`https://api-reservas-sif.whitedesert-ee16f22f.eastus.azurecontainerapps.io/solicitudes/${solicitud.id_solicitudes}`);
       const data = await response.json();
 
       if (response.ok) {

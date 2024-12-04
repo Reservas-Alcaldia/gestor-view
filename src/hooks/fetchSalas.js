@@ -7,14 +7,14 @@ export const fetchSalasDisponibles = async (solicitud) => {
     let salas;
 
     if (solicitud.Num_asistentes <= 15) {
-        const response = await fetch(`http://localhost:3000/salas/disponibilidad-individual/${idSolicitud}`);
+        const response = await fetch(`https://api-reservas-sif.whitedesert-ee16f22f.eastus.azurecontainerapps.io/salas/disponibilidad-individual/${idSolicitud}`);
         if (!response.ok) {
             throw new Error('Error al obtener las salas individuales');
         }
         const responseData = await response.json();
         salas = responseData.data;
     } else {
-        const response = await fetch(`http://localhost:3000/salas/disponibilidad-combinada/${idSolicitud}`);
+        const response = await fetch(`https://api-reservas-sif.whitedesert-ee16f22f.eastus.azurecontainerapps.io/salas/disponibilidad-combinada/${idSolicitud}`);
         if (!response.ok) {
             throw new Error('Error al obtener las salas combinadas');
         }

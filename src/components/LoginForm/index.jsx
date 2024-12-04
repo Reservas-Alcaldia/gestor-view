@@ -10,7 +10,7 @@ function LoginForm() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        if (usuario === 'admin' && contraseña === '1234') {
+        if (usuario !== '' && contraseña != '') {
             // Si las credenciales son correctas, redirige al Admin
             navigate('/admin');
         } else {

@@ -7,9 +7,9 @@ export const fetchHorariosDisponibles = async (solicitud) => {
     let response;
 
     if (solicitud.Num_asistentes <= 15) {
-        response = await fetch(`http://localhost:3000/salas/intervalos-individual/${idSolicitud}`);
+        response = await fetch(`https://api-reservas-sif.whitedesert-ee16f22f.eastus.azurecontainerapps.io/salas/intervalos-individual/${idSolicitud}`);
     } else {
-        response = await fetch(`http://localhost:3000/salas/intervalos-combinados/${idSolicitud}`);
+        response = await fetch(`https://api-reservas-sif.whitedesert-ee16f22f.eastus.azurecontainerapps.io/salas/intervalos-combinados/${idSolicitud}`);
     }
 
     if (!response.ok) {

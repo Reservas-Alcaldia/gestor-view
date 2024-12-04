@@ -1,5 +1,5 @@
 export const agendarSolicitud = async (solicitudId, data) => {
-    const response = await fetch(`http://localhost:3000/solicitudes/approve/${solicitudId}`, {
+    const response = await fetch(`https://api-reservas-sif.whitedesert-ee16f22f.eastus.azurecontainerapps.io/solicitudes/approve/${solicitudId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -15,7 +15,7 @@ export const agendarSolicitud = async (solicitudId, data) => {
   };
   
   export const rechazarSolicitud = async (solicitudId) => {
-    const response = await fetch(`http://localhost:3000/solicitudes/disapprove/${solicitudId}`, {
+    const response = await fetch(`https://api-reservas-sif.whitedesert-ee16f22f.eastus.azurecontainerapps.io/solicitudes/disapprove/${solicitudId}`, {
       method: 'PUT',
     });
   
